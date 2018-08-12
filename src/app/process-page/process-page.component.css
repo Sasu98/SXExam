@@ -1,0 +1,8 @@
+#vertical-nav {
+    background-color: darkgrey;
+    position: fixed;
+    height: 100%;
+    width: 70px;
+    border-radius: 8px;
+    overflow-y: auto;
+}

@@ -1,0 +1,35 @@
+<div id="page-1" *ngIf="page == 1">
+  <h1>Examen administrativo</h1>
+  <h3>Introduccion</h3>
+  <p>Si usted leyó el documento "Guia administrativa" significa que está dispuesto a realizar este examen que, en caso de ser aprobado, lo catapultará a ser Miembro de prueba.
+
+    En primera instancia se les agradece por el realizar el intento de aspirar a formar parte de nuestro equipo, es una tarea compleja y tendra que entender que la constancia y perseverancia podra cosechar buenos frutos.
+
+    Es menester aclarar que este examen tendra cierto grado de complejidad y usted debera entender que no podemos abrirles las puertas de la administracion a personas que no esten lo realmente capacitados. Si considera para usted este examen es extremadamente complejo simplemente le tocara resignarse y aceptar la realidad. Posiblemente le sirva de experiencia para otra ocasion.
+  </p>
+</div>
+<div id="page-2" *ngIf="page == 2">
+  <h2>Metodologia</h2>
+  <ul>
+    <li>Son 1000 puntos en total.</li>
+    <li>Seran 3 secciones las cuales tendra cierta cantidad de puntos.</li>
+    <li>Debe estar el 80% correcto para que el examen sea aprobado.</li>
+    <li>Tiene 360 minutos maximos...</li>
+    <li>Siga bien la consigna, si no la cumple el item sera considerado nulo.</li>
+  </ul>
+  <p>Sin mas que decir, ¡exitos! Porque la suerte es para los mediocres</p>
+</div>
+<div id="page-3" *ngIf="page == 3">
+  <h1>¿Deseas iniciar el examen?</h1>
+  <h4>Cuando presiones el boton <b>siguiente</b>, el cronometro iniciara y no se detendra por ningun motivo.</h4>
+</div>
+
+<nav id="btns" aria-label="Navegacion">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" *ngIf="page > 1" (click)="prevPage()" href="#">Volver</a></li>
+    <li class="page-item"><a class="page-link" (click)="page=1" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" (click)="page=2" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" (click)="page=3" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" (click)="nextPage()" href="#">Siguiente</a></li>
+  </ul>
+</nav>

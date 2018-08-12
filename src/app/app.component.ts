@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'SXExam';
+  examStarted: boolean = false;
+
+  startExam(){
+    this.examStarted = true;
+    //alert("El examen se esta cargando!")
+  }
 }

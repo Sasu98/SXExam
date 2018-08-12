@@ -1,0 +1,19 @@
+
+<div id="vertical-nav">
+    <div class="list-group" id="myList" role="tablist">
+      <a *ngFor="let ejercicio of examen.ejercicios; let i=index" class="list-group-item list-group-item-info list-group-item-action" data-toggle="list" role="tab" (click)="ejercicio_seleccionado=examen.ejercicios[i]">{{i+1}}</a>
+    </div>
+</div>
+<br>
+<div *ngIf="ejercicio_seleccionado" style="padding-left: 80px;">
+  <div class="card">
+    <div class="card-header">
+        <b>{{ejercicio_seleccionado.pregunta}}</b>
+    </div>
+    <div class="card-body">
+        <label for="RespuestaTextarea">Respuesta:</label>
+        <textarea class="form-control" id="RespuestaTextarea" placeholder="Escribe tu respuesta..." [(ngModel)]="ejercicio_seleccionado.respuesta" rows="3"></textarea>
+        <br><button type="button" class="btn btn-success btn-lg btn-block">Marcar como respondido</button>
+      </div>
+  </div>
+</div>
